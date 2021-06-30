@@ -5,16 +5,16 @@
 
 ## Question
 
-The purpose of the model I plan to build is to predict whether this individual borrower will repay the loan (or not) given the certain information from historical database. 
+The purpose of the model I plan to build is to predict whether an individual borrower will repay their loan (or not) given various data points and information from a historical database. 
 
-So in the future, when we have a new potential borrower/customer coming to us, we can predict if this person will pay back or not, then it can help the decision making for lending out the loan or not. /we can decide if we should lend out the loan.
+So in the future, when we have a new potential borrower coming to us, we can predict if this person will pay back or not. This will help with the decision making framework for whethe to lend to the borrower or not.
 
 
-My client, bank loan department/ lending institution, provides loans to the borrowers with charging interest rate. If the borrower repays the loan, the lender can gain the profit with interests. If not/the opposite/the borrower cant payback, the lender would lose money from the borrower failed to repay and it can hurt the business.  
+My client, a lending institution, provides loans to the borrower and charges interest. The borrower is obligate to pay interest periodically, but also pay back the full principal of the loan at the end. If the borrower repays the loan, the lender will receive the full interest rate and their initial capital they loaned. If the borrower defaults at any point in time, the lender would lose the entire principal of the loan as well as interest payments not yet received. This would be a large impact to the lender's profit and capital base.  
 
-With this prediction model, my client will benefit from being able to predict the risk of the borrower on whether they can repay or not.
+With this prediction model, my client will benefit from being able to predict the risk of the borrower on whether they will pay back the loan and interest or not.
 
-As lowering the risk of borrower not paying back by using this model, the lender will have less exposure on borrowers default and money loss, by not only helping the department making decisions easier and better, but also gaining profits on the higher chance
+Lowering the risk of borrower defaults using the model, the lender will face a lower % of its borrowers defaulting and thus help the business to earn higher profits and maintain more customer relationships.
 
 
 ## Data
