@@ -30,11 +30,11 @@ This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’
 	__Features including:__
 	- Variables: 
 
-		loan amount, employee title, employee length, home ownership, annual income, debt to income ratio, loan purpose, FICO, loan grades from Lending Club, interest rate, installments and address state
+		loan amount, employee title, employee length, home ownership, annual income, debt to income ratio, loan purpose, FICO, loan grades from Lending Club, interest rate, installments, address state, etc.
 
 	- Target: 
 
-		Loan Status, as whether is charged off or fully paid, will be the target I want to predict if the borrower will repay the loan or default.
+		Loan Status, whether Charged Off or Fully Paid, will be the target I aim to predict.
 
 
 
