@@ -19,25 +19,27 @@ As lowering the risk of borrower not paying back by using this model, the lender
 
 ## Data
 
-
+#### 	Resource  : Kaggle
 This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’s downloaded from Kaggle.
 
-###	Resource  : Kaggle
+
 1.	[Lending Club 2007-2020Q3](https://www.kaggle.com/ethon0426/lending-club-20072020q1?select=Loan_status_2007-2020Q3.gzip)
-It's a large dataset ( 2,925,493 datapoints with 150+ features) so I plan to cut down the size and only use the most recently 5 years data for my analysis.
 
-#### Features including
-- Variables: 
+	It's a large dataset ( 2,925,493 datapoints with 150+ features) so I plan to cut down the size and only use the most recently 5 years data for my analysis.
 
-loan amount/employee title/employee length/home ownership/annual income/debt to income ratio/loan purpose/FICO/loan grades from Lending Club/interest rate/installments/address state
+	__Features including:__
+	- Variables: 
 
-- Target: 
+		loan amount, employee title, employee length, home ownership, annual income, debt to income ratio, loan purpose, FICO, loan grades from Lending Club, interest rate, installments and address state
 
-Loan Status, as whether is charged off or fully paid, will be the target I want to predict if the borrower will repay the loan or default.
+	- Target: 
+
+		Loan Status, as whether is charged off or fully paid, will be the target I want to predict if the borrower will repay the loan or default.
 
 
 
 2.	[Loan Dictionary](https://www.kaggle.com/ethon0426/lending-club-20072020q1?select=LCDataDictionary.xlsx)
+      
       As below, it’s a detailed descriptions table for the data features/columns 
 
 
@@ -60,8 +62,8 @@ Loan Status, as whether is charged off or fully paid, will be the target I want 
 
 #### Data cleaning & analysis 	
 	
-   * import numpy as np
-   * import pandas as pd
+* import numpy as np
+* import pandas as pd
 
 #### Visualizations	
 1. pairplot
