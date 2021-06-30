@@ -65,7 +65,7 @@ This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’
 * import numpy as np
 * import pandas as pd
 
-#### Visualizations	
+####  Data Visualizations	
 1. pairplot
     * import matplotlib.pyplot as plt  	%matplotlib inline
       
@@ -77,6 +77,6 @@ This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’
 
 ## MVP Goal:
 
-✨Ａ histogram to show the relationship between Interest Rate and Loan Status(repay or default)✨
+✨Ａ histogram to show the relationship between Interest Rate and Loan Status (repay or default)✨
 
-✨Ａ data visualization chart from Tableau to see which states have more borrowers default on loan.✨
+✨Ａ map from Tableau showing which states have more borrowers who default on their loans.✨
