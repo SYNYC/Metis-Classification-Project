@@ -40,7 +40,7 @@ This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’
 
 2.	[Loan Dictionary](https://www.kaggle.com/ethon0426/lending-club-20072020q1?select=LCDataDictionary.xlsx)
       
-      As below, it’s a detailed descriptions table for the data features/columns 
+      It’s a detailed descriptions table for all features/columns from the dataset. See below for some examples:
 
 
 <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/LoanDictionary.png">
