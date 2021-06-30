@@ -43,7 +43,7 @@ This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’
       As below, it’s a detailed descriptions table for the data features/columns 
 
 
-<img src="https://github.com/SYNYC/2_Project_Movies/blob/main/charts/df%20head.png">
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/LoanDictionary.png">
 
 
 
