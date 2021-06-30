@@ -46,8 +46,8 @@ Loan Status, as whether is charged off or fully paid, will be the target I want 
 
 
 ## Tools
-#### Classification sklearn
-	a. __modeling__ 
+#### Classification - sklearn
+1. modeling
     * from sklearn.model_selection import train_test_split
     * from sklearn.preprocessing import StandardScaler
     * from sklearn.linear_model import Logisticregression
@@ -55,21 +55,20 @@ Loan Status, as whether is charged off or fully paid, will be the target I want 
     * from sklearn.ensemble import RandomForestClassifier
 	* from sklearn.neighbors import KNeighborsClassifier
 	* from sklearn.metrics import roc_auc_score
-
-   b. __evaluation__
+2. evaluation
 	* from sklearn.metrics import classification_report,confusion_matrix
 
 #### Data cleaning & analysis 	
 	
-* import numpy as np
-* import pandas as pd
+   * import numpy as np
+   * import pandas as pd
 
 #### Visualizations	
--  pairplot
-      * import matplotlib.pyplot as plt  	%matplotlib inline
+1. pairplot
+    * import matplotlib.pyplot as plt  	%matplotlib inline
       
-- mapping
-       * Tableau
+2. mapping
+    * Tableau
 
 
 
