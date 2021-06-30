@@ -1,4 +1,4 @@
-# Project 4 Classification : Loan Repayment Prediction
+# Classification : Loan Repayment Prediction
 
 # Project Proposal
 
