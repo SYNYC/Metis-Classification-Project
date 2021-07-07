@@ -22,7 +22,7 @@ After doing data cleaning, EDA and feature engineering, I was able to cut down t
 
 3. delete the row with missing values -> n size : 2925493 to 2657654
 
-4. filter by Target(loan status) as Fully Paid and Charged Off. Discard the rest of loan status -> n size : 2657654 to 1711571
+4. filter by Loan Status(target) as "Fully Paid" and "Charged Off" only. Discard the rest of loan status -> n size : 2657654 to 1711571
 
 5. made a histogram on loan issued date and found out most of the records are between 2017 to 2020 (vs original issued date range was 2007 to 2020. I assumed Lending Club is getting popular overtime, and I tend not to look into the loan data around 2008 financial crisis since the situation was different, so I only took recent 3 years loan data : 2018 Jan to 2020 Sep  -> n : 246004
 
