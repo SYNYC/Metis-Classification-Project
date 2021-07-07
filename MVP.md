@@ -22,19 +22,21 @@ After doing data cleaning, EDA and feature engineering, I was able to cut down t
 
 3. delete the row with missing values -> n size : 2925493 to 2657654
 
-4. made a histogram on loan issued date and found out most of the records are between 2017 to 2020, I assumed Lending Club is getting popular overtime, so I only took recent 3 years loan data : 2018 Jan to 2020 Sep  -> n : 246004
+4. filter by Target(loan status) as Fully Paid and Charged Off. Discard the rest of loan status -> n size : 2657654 to 1711571
 
-5. drop financial institution features as interest rate, grade, sub grade, fico score since these are likely created by financial professionals and I’d like to see my model perform without it first. Later I might add it back to see if it will improve my model since they are good predictors. 
+5. made a histogram on loan issued date and found out most of the records are between 2017 to 2020 (vs original issued date range was 2007 to 2020. I assumed Lending Club is getting popular overtime, and I tend not to look into the loan data around 2008 financial crisis since the situation was different, so I only took recent 3 years loan data : 2018 Jan to 2020 Sep  -> n : 246004
+
+6. drop financial institution features as interest rate, grade, sub grade, fico score since these are likely created by financial professionals and I’d like to see my model perform without it first. Later I might add it back to see if it will improve my model since they are good predictors. 
 
 
-6. the relationship between feature "employment length' and target "Loan Status. Borrowers with 10+ year employment length tend to pay back their loan the most. On the other hand, it's also the majority group who charged off the loan.
+7. the relationship between feature "employment length' and target "Loan Status. Borrowers with 10+ year employment length tend to pay back their loan the most. On the other hand, it's also the majority group who charged off the loan.
 
  <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/employ_length.png">
 
-7. create dummies for Catergorical features and applied feature engineer on "address state" - break into 4 major US regions instead of each state.
+8. create dummies for Catergorical features and applied feature engineer on "address state" - break into 4 major US regions instead of each state.
  
  
-8. made a pairplot to observe the trend on numeric features. 
+9. made a pairplot to observe the trend on numeric features. 
 
 <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/pairplot.png" width = "1000" height = "1000">
 
