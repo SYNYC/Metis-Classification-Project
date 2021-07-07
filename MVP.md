@@ -5,6 +5,13 @@
 Initially I had almost 3 million data points and 140 features. I aimed to get to a smaller size of  dataset with less than 50 features to process my next step.
 
 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2925493 entries, 0 to 2925492
+Columns: 141 entries, id to debt_settlement_flag
+dtypes: float64(106), object(35)
+memory usage: 3.1+ GB ''' 
+
+
 After doing data cleaning, EDA and feature engineering, I was able to cut down to 246,000 data points with 28 features. Here’s what I did:
 
 
@@ -19,11 +26,18 @@ After doing data cleaning, EDA and feature engineering, I was able to cut down t
 
 5. drop financial institution features as interest rate, grade, sub grade, fico score since these are likely created by financial professionals and I’d like to see my model perform without it first. Later I might add it back to see if it will improve my model since they are good predictors. 
 
-6. made a pairplot to observe the trend on numeric features. 
+
+6. the relationship between feature "employment length' and target "Loan Status. Borrowers with 10+ year employment length tend to pay back their loan the most. On the other hand, it's also the majority group who charged off the loan.
+
+ 
+
+7. made a pairplot to observe the trend on numeric features. 
 
 
 <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/pairplot.png" width = "1000" height = "1000">
 
+
+8. create dummies for Catergorical features and applied feature engineer 
 
 ## Baseline Model - Simple Logistic Regression
 
