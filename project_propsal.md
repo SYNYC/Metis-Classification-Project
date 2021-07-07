@@ -25,7 +25,7 @@ This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’
 
 1.	[Lending Club 2007-2020Q3](https://www.kaggle.com/ethon0426/lending-club-20072020q1?select=Loan_status_2007-2020Q3.gzip)
 
-	It's a large dataset ( 2,925,493 datapoints with 140+ features) so I plan to cut down the size and only use the most recently 5 years data for my analysis.
+	It's a large dataset ( 2,925,493 datapoints with 140+ features) so I plan to cut down the size and only use the most recently 3 years data for my analysis.
 
 	__Features including:__
 	- Variables: 
@@ -77,6 +77,6 @@ This dataset is provide by [Lending Club](https://www.lendingclub.com) and it’
 
 ## MVP Goal:
 
-✨Ａ histogram to show the relationship between Interest Rate and Loan Status (repay or default)✨
+✨Ａ histogram to show the relationship between Employment Length and Loan Status (repay or default)✨
 
-✨Ａ map from Tableau showing which states have more borrowers who default on their loans.✨
+✨Ａ baseline model on Logistic Regression✨
