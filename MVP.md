@@ -29,15 +29,16 @@ After doing data cleaning, EDA and feature engineering, I was able to cut down t
 
 6. the relationship between feature "employment length' and target "Loan Status. Borrowers with 10+ year employment length tend to pay back their loan the most. On the other hand, it's also the majority group who charged off the loan.
 
+ <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/employ_length.png">
+
+7. create dummies for Catergorical features and applied feature engineer on "address state" - break into 4 major US regions instead of each state.
  
-
-7. made a pairplot to observe the trend on numeric features. 
-
+ 
+8. made a pairplot to observe the trend on numeric features. 
 
 <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/pairplot.png" width = "1000" height = "1000">
 
 
-8. create dummies for Catergorical features and applied feature engineer 
 
 ## Baseline Model - Simple Logistic Regression
 
