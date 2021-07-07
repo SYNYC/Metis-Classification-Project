@@ -2,7 +2,7 @@
 ##### Sabrina Yang
 
 
-Initially I had almost 3 million data points and 140 features . I aimed to get to a smaller size of  dataset with less than 50 features to process my next step.
+Initially I had almost 3 million data points and 140 features. I aimed to get to a smaller size of  dataset with less than 50 features to process my next step.
 
 
 After doing data cleaning, EDA and feature engineering, I was able to cut down to 246,000 data points with 28 features. Here’s what I did:
@@ -19,48 +19,46 @@ After doing data cleaning, EDA and feature engineering, I was able to cut down t
 
 5. drop financial institution features as interest rate, grade, sub grade, fico score since these are likely created by financial professionals and I’d like to see my model perform without it first. Later I might add it back to see if it will improve my model since they are good predictors. 
 
-6. made a pairplot to observe the trend on numeric features. It doesn't provide much insights on which features are more outstanding.
+6. made a pairplot to observe the trend on numeric features. 
 
 
-<img src="https://github.com/SYNYC/3_Project_EV/blob/main/charts/AADT.png">
-
-   width = "750" height = "450">
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/pairplot.png" width = "1000" height = "1000">
 
 
 ## Baseline Model - Simple Logistic Regression
 
 
 I ran a simple Logistic Regression as my baseline model. In my project, I assume banks don't want to lend out money to borrowers who can’t pay back, so I will focus more on Recall than Precision. However, my baseline model Recall is only 0.02, but I’ll improve on my next model.
-Baseline model F1 score is 0.042. Test AUC: 0.626. See the following charts for more details:
+Baseline model F1 score is 0.042. Test AUC: 0.626. See the following for Classification Report and Confusion Matrix: 
 
 
-Classification Report
-<img src="https://github.com/SYNYC/3_Project_EV/blob/main/charts/AADT.png">
+
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/logreg_report.png" > 
 
 
-Confusion Matrix
- <img src="https://github.com/SYNYC/3_Project_EV/blob/main/charts/AADT.png" width = "750" height = "450">
+
+ <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/confusion_matrix_logreg.png">
 
 
 
 
 ## Logistic Regression with Oversampling
 
-As I making “Charged Off” on loan as positive class (1) and “Fully Paid” as negative class (0), the ratio is imbalance (2:8), so I added Weighted Class for Oversampling method to balance it. The scores improved: Recall increased to 0.53, F1 score is 0.42. Test AUC: 0.626. 
-
-
-Classification Report
-<img src="https://github.com/SYNYC/3_Project_EV/blob/main/charts/AADT.png">
-
-
-Confusion Matrix
-<img src="https://github.com/SYNYC/3_Project_EV/blob/main/charts/Final_Ranking.png" width = "850" height = "450">
+As I making “Charged Off” on loan as positive class (1) and “Fully Paid” as negative class (0), the ratio is imbalance (2:8), so I added Weighted Class for Oversampling method to balance it. The scores improved: Recall increased to 0.53, F1 score is 0.42. Test AUC: 0.626.  See the following for Classification Report and Confusion Matrix: 
 
 
 
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/logreg_oversampling_report.png">
 
 
-Next, I plan to use Random Forest and XGBoost for more modeling.  
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/confusion_matrix_logreg_oversampling.png">
+
+
+
+
+
+## Next 
+I plan to use Random Forest and XGBoost for more modeling.  
 
 
 
