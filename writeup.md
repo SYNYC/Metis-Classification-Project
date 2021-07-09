@@ -29,7 +29,14 @@ The dataset is originally from [Lending Club](https://www.lendingclub.com/) with
 4.	XGBoost
 5.	Tuned the model by GridSearchCV
 
+*Handling Class Imbalance*
+1. Random Forest
 
+	class_weight = "balance" to make it equal ratio
+
+2. XGBoost
+
+	The class imbalance for original dataset is 0.79 (negative) vs 0.20(positive), so the most accurate scale_pos_weight should be around 4, but GridSearchCV shows me 5 worked out well so I choose 5 to continue my tunning. The reason I didn't choose anything above 6 (even their F2 score were higher) is because I don't want my classes got too many positive samples versus negative cases, and I assume the ideal ratio should be balance like 1: 1.
 
 ## Tools
 
@@ -50,14 +57,15 @@ The dataset is originally from [Lending Club](https://www.lendingclub.com/) with
 The results showed that Random Forest model worked out the best after tuning hyperparameters. See the F beta 2 score below
 
 
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/100k/rf4/best_score_0.5445.png >
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/100k/rf4/best_score_0.5445.png" >
 
 
 In terms of feature importance, I found out that the features related to Charge Offs(positive cases) are :
-1.	 __term_60__ is the most important with the coefficient 0.1975
+1.	__term_60__ is the most important with the coefficient 0.1975
     - a.	Term is the number of months that a borrower must pay monthly payments
     - b.	People who tend to default are usually ones with longer terms
     - c.	Paying their loan over a longer period of time is more difficult when the borrower is going through financial hardship
+    - 
 2.	__Installment__ is the second most important with a coefficient of 0.1388
     - a.	Installment is the monthly payment owed by the borrower if the loan originates
     - b.	The higher the monthly payment, the more likely a borrower cannot fulfill it and will charge off
@@ -74,8 +82,8 @@ In terms of feature importance, I found out that the features related to Charge 
     - b.	Credit Card is the reason most people take out a loan from the Lending Club, followed by Debt Consolidation
 6.	__Address State__
     - a. The state provided by the borrower in the loan application
-	  - b. I sorted all states into 4 categories : North East, West, South, and Central
-    - c.	West is more likely to default than South, which is more likely to default than North East
+    - b. I sorted all states into 4 categories : North East, West, South, and Central
+    - c. West is more likely to default than South, which is more likely to default than North East
 
 ### Results
 <img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/100k/rf4/best_rf4_feat_chart.png" >
