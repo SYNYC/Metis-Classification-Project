@@ -54,40 +54,62 @@ The dataset is originally from [Lending Club](https://www.lendingclub.com/) with
 
 ## Summary
 
-The results showed that Random Forest model worked out the best after tuning hyperparameters. See the F beta 2 score below
+The results as below shows __Fbeta 2 score = 0.589__  from XGBoost model that worked out the best out of other models after tuning hyperparameters: 
+
+ 		      xgb_5 = XGBClassifier(eval_metric='mlogloss',
+                      				scale_pos_weight = 5,
+                     		 		learning_rate = 0.05, 
+                      				min_child_weight = 57, 
+                     				max_depth = 5 ,
+                      				n_estimators = 300,   
+                      				n_jobs = -1 ,random_state =50,
+                      				subsample = 0.5) 
 
 
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/100k/rf4/best_score_0.5445.png" >
 
 
-In terms of feature importance, I found out that the features related to Charge Offs(positive cases) are :
-1.	__term_60__ is the most important with the coefficient 0.1975
+
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/score_0.589.png" >
+
+
+In terms of feature importance, I found out that the top features related to Charge Offs(positive cases) are :
+1.	__term_60__ is the most important with the highest coefficient 
     - a.	Term is the number of months that a borrower must pay monthly payments
     - b.	People who tend to default are usually ones with longer terms
     - c.	Paying their loan over a longer period of time is more difficult when the borrower is going through financial hardship
-    - 
-2.	__Installment__ is the second most important with a coefficient of 0.1388
-    - a.	Installment is the monthly payment owed by the borrower if the loan originates
-    - b.	The higher the monthly payment, the more likely a borrower cannot fulfill it and will charge off
-3.	__DTI (Debt to Income Ratio)__ is important for many credit rating agencies and banks, and is the 7th most important feature in my model
-    - a.	DTI is the ratio of how much debt a borrower has relative to their income
-    - b.	Since income is what services the debt, a higher DTI ratio would result in higher likelihood of charge offs
-4.	__Home_ownership__
+2.	__Home_ownership__
     - a.	The home ownership status provided by the borrower during registration or obtained from the credit report. Our values are: RENT, OWN, MORTGAGE, OTHER
     - b.	RENTis more likely to charge off than OWN
     - c.	OTHER is zero coef and thus not important
 
-5.	__Purpose__
-    - a.	A category provided by the borrower for the loan request. 
-    - b.	Credit Card is the reason most people take out a loan from the Lending Club, followed by Debt Consolidation
-6.	__Address State__
+3.	__Inquiry_last_6mths__
+    - a. 	The number of inquires in the past 6 months (excluding auto and mortgage inquiries)
+    - b. 	more times of inquries got made in last 6 months can indicated the borrowers were under more financial stress or spending, so it could lead to more probabilty of failing to payback.
+     
+4.	__Installment__ 
+    - a.	Installment is the monthly payment owed by the borrower if the loan originates
+    - b.	The higher the monthly payment, the more likely a borrower cannot fulfill it and will charge off
+5.	__Address State__
     - a. The state provided by the borrower in the loan application
     - b. I sorted all states into 4 categories : North East, West, South, and Central
     - c. West is more likely to default than South, which is more likely to default than North East
 
+Less important than the top 5 features but I wanted to mention that 
+
+6.	__DTI (Debt to Income Ratio)__ is important for many credit rating agencies and banks, but it's not on top important feature in my model
+    - a.	DTI is the ratio of how much debt a borrower has relative to their income
+    - b.        Log Annual income is more important than DTI
+    - c.	Since income is what services the debt, a higher DTI ratio would result in higher likelihood of charge offs, but income is still more important
+
+
+7.	__Purpose__
+    - a.	A category provided by the borrower for the loan request. 
+    - b.	Credit Card is the reason most people take out a loan from the Lending Club, followed by Debt Consolidation
+
+
 ### Results
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/100k/rf4/best_rf4_feat_chart.png" >
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/100k/rf4/best_rf4_feat_import.png" >
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/feat_chart.png" >
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/feat_imp.png" >
 
 
 
