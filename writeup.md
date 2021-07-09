@@ -69,7 +69,7 @@ The results as below shows __Fbeta 2 score = 0.589__  from XGBoost model that wo
 
 
 
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/score_0.589.png" >
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/score_0.589.png" width = "450" height = "300" >
 
 
 In terms of feature importance, I found out that the top features related to Charge Offs(positive cases) are :
@@ -108,8 +108,8 @@ Less important than the top 5 features but I wanted to mention that
 
 
 ### Results
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/feat_chart.png" >
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/feat_imp.png" >
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/feat_chart.png" width = "800" height = "750" >
+<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/feat_imp.png" width = "700" height = "550" >
 
 
 
