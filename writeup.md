@@ -5,13 +5,13 @@ Sabrina Yang
 
 ## Abstract
 
-The purpose of this project is to help lending institutions to determine which borrowers to lend to. In order to achieve this, I built a model to predict whether a borrower would repay their loan or not. Lenders will loan a principal amount out to borrowers and also charge interest. Once the principal is paid back in full at the end of the loan, the lender will make a significant profit. This is why they would prefer not to risk losing even a single dollar as this can greatly affect their profit. There are many variables and features associated with loans, which can be found on Lending Club’s website. However, I determined that 28 features are most likely to have the largest impact on the model and have analyzed these as such. By building a model that incorporates these features, the lender would be able to quickly discern which borrowers are most likely to repay or not repay their loans. 
+The purpose of this project is to help lending institutions to determine which borrowers to lend to. In order to achieve this, I built a model to predict whether a borrower would repay their loan or not. Lenders will loan a principal amount out to borrowers and also charge interest. Once the principal is paid back in full at the end of the loan, the lender will make a significant profit. This is why they would prefer not to risk losing even a single dollar as this can greatly affect their profit. There are many variables and features associated with loans, which can be found on Lending Club’s website to measure the credit risk of P2P lending loans. However, I determined that 28 features are most likely to have the largest impact on the model and have analyzed these as such. By building a model that incorporates these features, the lender would be able to quickly discern which borrowers are most likely to repay or not repay their loans. 
 
 ## Design
 The question of whether a client will pay or not can be solved by using supervised learning as a classification tool. Doing a hard prediction will help me predict whether the client will pay or not. The lending institution is concerned about losing any principal at all and so would rather not lend than to lose any money at all. So in this project, recall will be more focused than precision. As such, I took the F2 score as my critical examination tool.
 
 ## Data
-The dataset is originally from [Lending Club](https://www.lendingclub.com/) with 28 features in total, some of which are numerical. The time period of the data is 3 years (2018 to 2021). 
+The dataset is originally from [Lending Club](https://www.lendingclub.com/) and downloaded from [Kaggle](https://www.kaggle.com/ethon0426/lending-club-20072020q1) that contains 2.9 millions data points with 140+ features in total, some of which are numerical and others are catergorical. The time period of orignal data is from 2007 to 2020 Q3, but I decided to use the most recent 3 years (2018 Jan to 2020 Sep). 
 
 
 
